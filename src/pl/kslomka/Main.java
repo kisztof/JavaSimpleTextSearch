@@ -2,6 +2,7 @@ package pl.kslomka;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +37,7 @@ public class Main {
             final String sentence = keyboard.nextLine();
 
             Search search = new Search(index);
-            PrintableResult.print(search.search(sentence));
+            PrintableResult.print(indexableDirectory.listFiles(), search.search(sentence));
         }
     }
 }
